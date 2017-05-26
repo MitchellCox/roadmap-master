@@ -1,0 +1,109 @@
+@modal-zindex: 1000;
+
+.modal-backdrop {
+  position: fixed;
+  background-color: rgba(71, 71, 71, 0.47);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9;
+}
+
+section.modal {
+  width: 700px;
+  max-width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  background-color: @light-gray;
+  z-index: 10;
+  overflow-y: auto;
+
+  box-shadow: 0 0 6px -2px #000;
+
+  .title-input {
+    font-size: 24px;
+    width: 90%;
+  }
+
+  .dates {
+    display: flex;
+    margin: 20px 0px;
+
+    .date {
+      margin-right: 10px;
+      width: 155px;
+    }
+  }
+
+  .links {
+    margin-bottom: 20px;
+    .block {
+      a, input {
+        display: block;
+      }
+
+      input {
+        width: 300px;
+        margin: 8px 0;
+        padding: 0 5px;
+      }
+    }
+  }
+
+  @local-height: 200px;
+  .description {
+    min-height: @local-height;
+  }
+
+  textarea {
+    width: 100%;
+    resize: vertical;
+    min-height: @local-height;
+    margin-bottom: 15px;
+  }
+
+  .x-modal {
+    float: right;
+    height: 30px;
+    cursor: pointer;
+  }
+
+  .content {
+    padding: 20px;
+    background-color: #fff;
+  }
+
+  .footer {
+    border-top: 1px solid @border-color;
+    padding: 20px;
+
+    .menu {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+
+      .item {
+        display: flex;
+        cursor: pointer;
+        padding: 5px 10px;
+        border-radius: @br;
+
+        p {
+          margin-left: 5px;
+        }
+
+        &:hover {
+          background-color: #fff;
+        }
+      }
+
+      .icon, p {
+        font-size: 14px;
+        color: @almost-black;
+      }
+    }
+  }
+}
