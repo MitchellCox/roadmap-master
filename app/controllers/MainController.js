@@ -10,7 +10,7 @@ function ($scope, apiService, $timeout, $rootScope) {
   };
 
   $scope.authenticate = function (passport) {
-    if (passport == 'guatemalaisthebest') {
+    if (passport == 'number12') {
       $scope.auth = true;
       localStorage.auth = true;
       alertify.success('Welcome!');
